@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Game title -->
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Link it"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+
+    <!-- Game description -->
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text_view"
+        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Povezi pojmove"
+        android:textStyle="bold"/>
+
+    <!-- Left column of terms -->
+    <TextView
+        android:id="@+id/left_term_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left Term 1"
+        android:layout_below="@id/description_text_view"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/left_term_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left Term 2"
+        android:layout_below="@id/left_term_1"
+        android:layout_alignLeft="@id/left_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/left_term_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left Term 3"
+        android:layout_below="@id/left_term_2"
+        android:layout_alignLeft="@id/left_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/left_term_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left Term 4"
+        android:layout_below="@id/left_term_3"
+        android:layout_alignLeft="@id/left_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/left_term_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left Term 5"
+        android:layout_below="@id/left_term_4"
+        android:layout_alignLeft="@id/left_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Right column of terms -->
+    <TextView
+        android:id="@+id/right_term_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right Term 1"
+        android:layout_below="@id/description_text_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/right_term_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right Term 2"
+        android:layout_below="@id/right_term_1"
+        android:layout_alignLeft="@id/right_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/right_term_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right Term 3"
+        android:layout_below="@id/right_term_2"
+        android:layout_alignLeft="@id/right_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/right_term_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right Term 4"
+        android:layout_below="@id/right_term_3"
+        android:layout_alignLeft="@id/right_term_1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/right_term_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right Term 5"
+        android:layout_below="@id/right_term_4"
+        android:layout_alignLeft="@id/right_term_1"
+        android:layout_marginTop="30dp"/>
+</RelativeLayout>

@@ -405,7 +405,7 @@
             android:text="Final Answer"/>
 
         <EditText
-
+            android:id="@+id/answer_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your answer here"/>

@@ -39,23 +39,23 @@
     </RelativeLayout>
 
     <!-- Profile Picture -->
-    <ImageView
+  <!--  <ImageView
         android:id="@+id/profile_picture"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/dropdown_menu"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_launcher_foreground"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"/>
-
+-->
     <!-- Username -->
+    <!--    android:layout_below="@id/profile_picture" -->
     <TextView
         android:id="@+id/username_text_view"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_below="@id/profile_picture"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="130dp"
         android:text="Username"
         android:textSize="24sp"
         android:textStyle="bold"/>
@@ -66,18 +66,83 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_below="@id/username_text_view"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="Email"
         android:textSize="18sp"/>
 
     <!-- Games Statistics -->
     <TextView
-        android:id="@+id/statistics_text_view"
+        android:id="@+id/brojPartija"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_below="@id/email_text_view"
-        android:layout_marginTop="32dp"
-        android:text="Statistics"
+        android:layout_marginTop="10dp"
+        android:text="Broj odigranih partija"
         android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/procenatPobeda"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/brojPartija"
+        android:layout_marginTop="10dp"
+        android:text="Procenat pobeda"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/poeniAsocijacije"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/procenatPobeda"
+        android:layout_marginTop="10dp"
+        android:text="Poeni asocijacije"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/poeniKoZnaZna"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/poeniAsocijacije"
+        android:layout_marginTop="10dp"
+        android:text="Poeni ko zna zna"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/poeniPovezivnaje"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/poeniKoZnaZna"
+        android:layout_marginTop="10dp"
+        android:text="Poeni povezivanje"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/poeniSkocko"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/poeniPovezivnaje"
+        android:layout_marginTop="10dp"
+        android:text="Poeni skocko"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/poeniMojBroj"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/poeniSkocko"
+        android:layout_marginTop="10dp"
+        android:text="Poeni moj broj"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/poeniKorakPoKorak"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/poeniMojBroj"
+        android:layout_marginTop="10dp"
+        android:text="Poeni korak po korak"
+        android:textSize="18sp"/>
+
+
 
 </RelativeLayout>

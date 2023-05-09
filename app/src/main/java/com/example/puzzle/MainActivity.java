@@ -2,6 +2,8 @@ package com.example.puzzle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.puzzle.activity.HomePageActivity;
 import com.example.puzzle.activity.RegistrationActivity;
+import com.example.puzzle.database.MyDatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = passwordEditText.getText().toString();
 
                 // Check if username and password are correct
-                if (username.equals("admin") && password.equals("1234")) {
+                if (isValidCredentials(username, password)) {
                     // If correct, display a success message and redirect to HomePageActivity
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
@@ -46,6 +49,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+
+    private boolean isValidCredentials(String username, String password) {
+        MyDatabaseHelper dbHelper = new MyDatabaseHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String[] projection = {MyDatabaseHelper.COLUMN_EMAIL, MyDatabaseHelper.COLUMN_PASSWORD};
+        String selection = MyDatabaseHelper.COLUMN_USERNAME + " = ? AND " + MyDatabaseHelper.COLUMN_PASSWORD + " = ?";
+        String[] selectionArgs = {username, password};
+        Cursor cursor = db.query(MyDatabaseHelper.TABLE_USER, projection, selection, selectionArgs, null, null, null);
+        boolean isValid = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return isValid;
     }
 
     public void goToRegistrationPage(View view) {
